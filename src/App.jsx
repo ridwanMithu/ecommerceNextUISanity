@@ -1,14 +1,14 @@
-import { NextUIProvider } from '@nextui-org/react'
 import './App.css'
+import { client } from './Config/SanityConfig'
 
 function App() {
   
 
   return (
     <>
-      <NextUIProvider>
+
         <h1>If you are here then you have NextUI</h1>
-      </NextUIProvider>
+
         
     </>
   )
