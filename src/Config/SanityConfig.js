@@ -13,5 +13,5 @@ export const client = createClient({
   ignoreBrowserTokenWarning: true
 })
 
-console.log(import.meta.env.VITE_SANITY_TOKEN )
+
 
