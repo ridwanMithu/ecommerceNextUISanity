@@ -1,7 +1,13 @@
-
+import { Helmet } from "react-helmet-async"
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <>
+      <Helmet>
+        <title>Home</title>
+        <link rel="canonical" href="/home" />
+      </Helmet>
+      <h1>Home page details</h1>
+    </>
   )
 }
