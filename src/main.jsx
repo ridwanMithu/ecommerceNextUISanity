@@ -7,9 +7,11 @@ import { router } from "./Router/router.jsx";
 import Layout from "./Layout/Layout.jsx";
 import { HelmetProvider } from "react-helmet-async";
 import { Auth0Provider } from "@auth0/auth0-react";
+import { UserProvider } from "./Context APIs/UserContex.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+  <UserProvider>
     <HelmetProvider>
       <Auth0Provider 
             domain={import.meta.env.VITE_AUTH0_DOMAIN}
@@ -25,5 +27,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         </RouterProvider>
       </Auth0Provider>
     </HelmetProvider>
+    </UserProvider>
   </React.StrictMode>
 );
