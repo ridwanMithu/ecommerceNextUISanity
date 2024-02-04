@@ -1,3 +1,5 @@
+import { IoLogOut } from "react-icons/io5";
+import { FaUserTie } from "react-icons/fa";
 import { useState } from "react";
 import {
   Navbar,
@@ -9,6 +11,12 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  Avatar,
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+
 } from "@nextui-org/react";
 import { AcmeLogo } from "./AcmeLogo.jsx";
 import { NavLink } from "react-router-dom";
@@ -49,10 +57,12 @@ export default function NavigationBar() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="sm:flex gap-4" justify="center">
+      <NavbarContent className="gap-4 sm:flex" justify="center">
         {menuItems.map((customLinks, index) => (
           <NavbarItem key={index}>
-            <NavLink to={customLinks.url}>
+            <NavLink className={({isActive}) =>
+    isActive ? "font-semibold danger" : "text-neutral-700 font-thin"}
+            to={customLinks.url}>
               {customLinks.name}
             </NavLink>
           </NavbarItem>
@@ -67,24 +77,27 @@ export default function NavigationBar() {
             Sign Up
           </Button>
         </NavbarItem>
+        <NavbarItem>
+          <Dropdown>
+            <DropdownTrigger>
+              <Avatar isBordered src="https://i.pravatar.cc/150?u=a04258114e29026708c" />
+            </DropdownTrigger>
+            <DropdownMenu aria-label="Static Actions">
+              <DropdownItem key="profile"><div className="flex items-center gap-2" > <FaUserTie/> Profile</div></DropdownItem>
+              <DropdownItem key="logout"> <div className="flex items-center gap-2" ><IoLogOut/>Logout</div></DropdownItem>
+
+            </DropdownMenu>
+          </Dropdown>
+        </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
-              {item.name}
-            </Link>
+        {menuItems.map((customLinks, index) => (
+          <NavbarMenuItem key={`${customLinks}-${index}`}>
+          <NavLink className={({isActive}) =>
+    isActive ? "font-semibold danger" : "text-neutral-700 font-thin"}
+            to={customLinks.url}>
+              {customLinks.name}
+            </NavLink>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
