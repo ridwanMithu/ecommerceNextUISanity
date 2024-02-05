@@ -20,17 +20,17 @@ export default function AllProducts() {
       <SelectItem>Fruits</SelectItem>
       </Select>
         </form>
-      <div className="flex justify-center m-10">
-        <div className="w-[20vw]">
+      <div className="flex flex-wrap justify-center m-10">
+        <div className="w-[25vw]">
         <ProductCard/>
         </div>
-        <div className="w-[20vw]">
+        <div className="w-[25vw]">
         <ProductCard/>
         </div>
-        <div className="w-[20vw]">
+        <div className="w-[25vw]">
         <ProductCard/>
         </div>
-        <div className="w-[20vw]">
+        <div className="w-[25vw]">
         <ProductCard/>
         </div>
       </div>

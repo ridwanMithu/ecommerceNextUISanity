@@ -7,6 +7,7 @@ import AllProducts from "../Pages/AllProducts"
 import TopSeller from "../Pages/TopSeller"
 import BlogDetails from "../Pages/BlogDetails"
 import { ProductDetilsCard } from "../Components/PageComponents/ProductDetailsCard"
+import PrivateRouter from "../PrivateRouter/PrivateRouter"
 
 
 export const router= createBrowserRouter(
@@ -34,7 +35,7 @@ export const router= createBrowserRouter(
         },
         {
           path:"/blog/:id",
-          element: <BlogDetails />,
+          element: <PrivateRouter/>,
         },
         {
           path:"/topseller",

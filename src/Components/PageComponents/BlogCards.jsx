@@ -1,6 +1,8 @@
 import {Card, CardHeader, CardBody, Image, Button} from "@nextui-org/react";
 
+
 export default function BlogCards() {
+
   return (
     <Card className="py-4 my-4">
       <CardHeader className="flex-col items-start px-4 pt-2 pb-0">

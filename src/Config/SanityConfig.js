@@ -1,5 +1,6 @@
 // sanity.js
 import {createClient} from '@sanity/client'
+import { createContext, useState } from 'react';
 // Import using ESM URL imports in environments that supports it:
 // import {createClient} from 'https://esm.sh/@sanity/client'
 

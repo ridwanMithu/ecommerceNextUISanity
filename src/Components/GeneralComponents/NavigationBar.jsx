@@ -28,7 +28,7 @@ export default function NavigationBar() {
   const { setLoggedUser} = useContext(userContext);
   const { loginWithPopup, user, logout } = useAuth0();
   setLoggedUser(user);
-  console.log("navbar", user);
+  
 
   const menuItems = [
     { id: crypto.randomUUID(), name: "Home", url: "/home" },
@@ -51,7 +51,7 @@ export default function NavigationBar() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="gap-4 sm:flex" justify="center">
+      <NavbarContent className="hidden gap-4 md:flex" justify="center">
         {menuItems.map((customLinks, index) => (
           <NavbarItem key={index}>
             <NavLink
