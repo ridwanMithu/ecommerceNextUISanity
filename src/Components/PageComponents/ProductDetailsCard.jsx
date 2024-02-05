@@ -1,7 +1,7 @@
 
 import { Star, ChevronDown } from 'lucide-react'
 
-export const ProductOverviewTwo = () => {
+export const ProductDetilsCard = () => {
   return (
     <section className="overflow-hidden">
       <div className="max-w-5xl px-5 py-24 mx-auto">

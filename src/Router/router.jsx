@@ -6,6 +6,7 @@ import Blog from "../Pages/Blog"
 import AllProducts from "../Pages/AllProducts"
 import TopSeller from "../Pages/TopSeller"
 import BlogDetails from "../Pages/BlogDetails"
+import { ProductDetilsCard } from "../Components/PageComponents/ProductDetailsCard"
 
 
 export const router= createBrowserRouter(
@@ -40,9 +41,14 @@ export const router= createBrowserRouter(
           element: <TopSeller />,
         },
         {
+          path:"/product/:id",
+          element: <ProductDetilsCard/>,
+        },
+        {
           path:"*",
           element: <NotFound/>,
-        }
+        },
+
       ]
 
   }
