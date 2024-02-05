@@ -1,5 +1,9 @@
 // Blog will get react slider
 import { Helmet } from "react-helmet-async"
+import BlogCards from "../Components/PageComponents/BlogCards"
+import {Input} from "@nextui-org/react";
+import BlogSlider from "../Components/PageComponents/BlogSlider";
+
 
 
 export default function Blog() {
@@ -7,9 +11,18 @@ export default function Blog() {
     <>
       <Helmet>
         <title>Blog</title>
-        <link rel="canonical" href="/home" />
+        <link rel="canonical" href="/blog" />
       </Helmet>
-      <h1>Find all the recipes and food and nutritions</h1>
+      <p className="text-3xl font-bold text-center text-black">Find all the recipes and food and nutritions</p>
+      
+      <div className="w-full h-[90vh] bg-red-100">
+
+      <div className="container flex flex-wrap justify-center gap-3">
+      <BlogSlider/>
+      </div>
+
+
+      </div>
     </>
   )
 }
