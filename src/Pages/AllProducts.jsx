@@ -1,8 +1,21 @@
 import { Helmet } from "react-helmet-async"
 import {Input, Select, SelectItem} from "@nextui-org/react";
 import ProductCard from "../Components/PageComponents/ProductCard";
+import { useEffect, useState } from "react";
 
 export default function AllProducts() {
+  const [grocery, setGrocery]=useState([]);
+  
+  const getGrocery=()=>{
+    fetch("/products.json")
+    .then((res)=>res.json())
+    .then((data) =>setGrocery(data));
+   };
+   console.log(grocery);
+   useEffect(()=>{
+    getGrocery();
+   },[]);
+
   return (
 
       <>
@@ -10,9 +23,10 @@ export default function AllProducts() {
           <title>Shop</title>
           <link rel="canonical" href="/home" />
         </Helmet>
-        <form className="flex justify-center"><Input type="text" label="search" className="max-w-md " />
+      <div>
+      <form className="flex justify-center"><Input type="text" label="Search your item" className="max-w-md " />
         <Select 
-        label="Select an animal" 
+        label="Select a Product" 
         className="max-w-md mx-10" 
       >
       <SelectItem>Meat Products</SelectItem>
@@ -20,19 +34,15 @@ export default function AllProducts() {
       <SelectItem>Fruits</SelectItem>
       </Select>
         </form>
-      <div className="flex flex-wrap justify-center m-10">
-        <div className="w-[25vw]">
-        <ProductCard/>
+      </div>
+      <div className="m-auto my-5">
+        <div className="flex flex-wrap justify-center gap-7">
+        {
+          grocery.map((groceryItem)=>(
+            <ProductCard key={groceryItem.id} groceryInfo={groceryItem} />
+          ))}
         </div>
-        <div className="w-[25vw]">
-        <ProductCard/>
-        </div>
-        <div className="w-[25vw]">
-        <ProductCard/>
-        </div>
-        <div className="w-[25vw]">
-        <ProductCard/>
-        </div>
+
       </div>
       </>
     )

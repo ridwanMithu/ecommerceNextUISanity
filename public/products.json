@@ -1,0 +1,72 @@
+[
+  {
+    "id": "a1b2c3d4e",
+    "image": "https://images.pexels.com/photos/255376/pexels-photo-255376.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "name": "Gala Apples",
+    "description": "Crisp and sweet, Gala apples are great for eating fresh or using in salads and sandwiches.",
+    "category": "Produce"
+  },
+  {
+    "id": "f5g6h7j8k",
+    "image": "https://images.pexels.com/photos/255377/pexels-photo-255377.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "name": "Boneless Skinless Chicken Breasts",
+    "description": "Lean and versatile, boneless skinless chicken breasts are a great source of protein for any meal.",
+    "category": "Meat"
+  },
+  {
+    "id": "l9m0n1p2q",
+    "image": "https://images.pexels.com/photos/255378/pexels-photo-255378.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "name": "Whole Milk",
+    "description": "Rich and creamy, whole milk is a great source of calcium and vitamin D.",
+    "category": "Dairy"
+  },
+  {
+    "id": "r3s4t5u6v",
+    "image": "https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "name": "Spaghetti",
+    "description": "A classic pasta shape, spaghetti is perfect for twirling around your fork and enjoying with your favorite sauce.",
+    "category": "Pasta"
+  },
+  {
+    "id": "w7x8y9z0a",
+    "image": "https://images.pexels.com/photos/255380/pexels-photo-255380.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "name": "Sourdough Bread",
+    "description": "Chewy and tangy, sourdough bread is a favorite among foodies and home bakers alike.",
+    "category": "Bakery"
+  },
+  {
+    "id": "c1d2e3f4g",
+    "image": "https://images.pexels.com/photos/255381/pexels-photo-255381.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "name": "Navel Oranges",
+    "description": "Juicy and sweet, navel oranges are a delicious and nutritious snack.",
+    "category": "Produce"
+  },
+  {
+    "id": "h5i6j7k8m",
+    "image": "https://images.pexels.com/photos/255382/pexels-photo-255382.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "name": "Ground Beef",
+    "description": "A versatile and convenient option, ground beef is a staple in many recipes.",
+    "category": "Meat"
+  },
+  {
+    "id": "n9o0p1q2r",
+    "image": "https://images.pexels.com/photos/255383/pexels-photo-255383.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "name": "Cheddar Cheese",
+    "description": "Sharp and tangy, cheddar cheese is a popular choice for snacking and cooking.",
+    "category": "Dairy"
+  },
+  {
+    "id": "t3u4v5w6x",
+    "image": "https://images.pexels.com/photos/255384/pexels-photo-255384.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "name": "Linguine",
+    "description": "A long and flat pasta shape, linguine is perfect for pairing with seafood and light sauces.",
+    "category": "Pasta"
+  },
+  {
+    "id": "z7y8a9b0c",
+    "image": "https://images.pexels.com/photos/255385/pexels-photo-255385.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "name": "Baguette",
+    "description": "Crusty and chewy, a baguette is a classic French bread that's perfect for sandwiches and dipping in soup.",
+    "category": "Bakery"
+  }
+]

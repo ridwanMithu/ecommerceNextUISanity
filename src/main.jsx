@@ -11,22 +11,22 @@ import { UserProvider } from "./Context APIs/UserContex.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-  <UserProvider>
-    <HelmetProvider>
-      <Auth0Provider 
-            domain={import.meta.env.VITE_AUTH0_DOMAIN}
-    clientId={import.meta.env.VITE_AUTH0_CLIENT_ID}
-    authorizationParams={{
-      redirect_uri: window.location.origin
-    }}
-      >
-        <RouterProvider router={router}>
-          <NextUIProvider>
-            <Layout />
-          </NextUIProvider>
-        </RouterProvider>
-      </Auth0Provider>
-    </HelmetProvider>
+    <UserProvider>
+      <HelmetProvider>
+        <Auth0Provider
+          domain={import.meta.env.VITE_AUTH0_DOMAIN}
+          clientId={import.meta.env.VITE_AUTH0_CLIENT_ID}
+          authorizationParams={{
+            redirect_uri: window.location.origin,
+          }}
+        >
+          <RouterProvider router={router}>
+            <NextUIProvider>
+              <Layout />
+            </NextUIProvider>
+          </RouterProvider>
+        </Auth0Provider>
+      </HelmetProvider>
     </UserProvider>
   </React.StrictMode>
 );
