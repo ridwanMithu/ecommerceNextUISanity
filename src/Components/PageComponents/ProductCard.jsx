@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 
 export default function ProductCard({groceryInfo}) {
@@ -9,16 +10,18 @@ export default function ProductCard({groceryInfo}) {
         className="h-[200px] w-full rounded-md object-cover p-2"
       />
       <div className="p-4">
-        <h1 className="text-lg font-semibold">{groceryInfo.name}</h1>
+        <h1 className="text-lg font-semibold">{groceryInfo.name} &nbsp;</h1>
         <p className="mt-3 text-sm text-gray-600">
           {groceryInfo.description}
         </p>
+        <NavLink to={`/product/${groceryInfo.id}`}>
         <button
           type="button"
           className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
         >
           Buy Now
         </button>
+        </NavLink>
       </div>
     </div>
   )

@@ -35,7 +35,7 @@ export const router= createBrowserRouter(
         },
         {
           path:"/blog/:id",
-          element: <PrivateRouter/>,
+          element: <BlogDetails/>,
         },
         {
           path:"/topseller",
@@ -43,7 +43,9 @@ export const router= createBrowserRouter(
         },
         {
           path:"/product/:id",
-          element: <ProductDetilsCard/>,
+          element: <PrivateRouter>
+            <ProductDetilsCard/>
+          </PrivateRouter>,
         },
         {
           path:"*",
