@@ -1,0 +1,79 @@
+[
+  {
+    "id": "abc123def45",
+    "author_name": "Jamie Oliver",
+    "blog_heading": "Quick and Easy Spaghetti Bolognese",
+    "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "category": "Pasta"
+  },
+  {
+    "id": "def456ghi78",
+    "author_name": "Gordon Ramsay",
+    "blog_heading": "Perfect Roast Chicken",
+    "image": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "category": "Poultry"
+  },
+  {
+    "id": "ghi789jkl01",
+    "author_name": "Nigella Lawson",
+    "blog_heading": "Decadent Chocolate Cake",
+    "image": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "category": "Desserts"
+  },
+  {
+    "id": "jkl012mno34",
+    "author_name": "Julia Child",
+    "blog_heading": "Classic French Onion Soup",
+    "image": "https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "category": "Soups"
+  },
+  {
+    "id": "mno345pqr67",
+    "author_name": "Bobby Flay",
+    "blog_heading": "Grilled Steak with Chimichurri Sauce",
+    "image": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "category": "Meats"
+  },
+  {
+    "id": "pqr678stu90",
+    "author_name": "Ina Garten",
+    "blog_heading": "Fresh Tomato and Basil Pizza",
+    "image": "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "category": "Pizza"
+  },
+  {
+    "id": "stu901vwx23",
+    "author_name": "Yotam Ottolenghi",
+    "blog_heading": "Middle Eastern Roasted Vegetables",
+    "image": "https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "category": "Vegetables"
+  },
+  {
+    "id": "vwx234yza56",
+    "author_name": "Alice Waters",
+    "blog_heading": "Farm Fresh Salad with Lemon Vinaigrette",
+    "image": "https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "category": "Salads"
+  },
+  {
+    "id": "yza567bcd89",
+    "author_name": "Ferran Adria",
+    "blog_heading": "Modern Spanish Tapas",
+    "image": "https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "category": "Tapas"
+  },
+  {
+    "id": "bcd890efg12",
+    "author_name": "Heston Blumenthal",
+    "blog_heading": "Experimental Cooking Techniques",
+    "image": "https://images.pexels.com/photos/940302/pexels-photo-940302.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "category": "Experimental"
+  },
+  {
+    "id": "efg123hij23",
+    "author_name": "Emeril Lagasse",
+    "blog_heading": "Creole Jambalaya",
+    "image": "https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "category": "Creole"
+  }
+]

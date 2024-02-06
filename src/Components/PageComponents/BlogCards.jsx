@@ -1,27 +1,33 @@
 import {Card, CardHeader, CardBody, Image, Button} from "@nextui-org/react";
+import { Link } from "react-router-dom";
 
 
-export default function BlogCards() {
+export default function BlogCards({blogInform}) {
+
+  // [_type=="blogSection"]{blogTopic, blogCategory, publishingDate,blogImage,_id}
 
   return (
-    <Card className="py-4 my-4">
+    <Card className="p-4 my-4">
       <CardHeader className="flex-col items-start px-4 pt-2 pb-0">
-        <p className="font-bold uppercase text-tiny">Daily Mix</p>
-        <small className="text-default-500">12 Tracks</small>
-        <h4 className="font-bold text-large">Frontend Radio</h4>
+        <p className="font-bold uppercase text-tiny">{blogInform.blogTopic}</p>
+        <small className="text-default-500">#{blogInform.blogCategory}</small>
+        <h4 className="font-bold">{blogInform.blogAuthor}</h4>
       </CardHeader>
-      <CardBody className="py-2 overflow-visible">
+      <CardBody className="py-2">
         <Image
           alt="Card background"
           className="object-cover rounded-xl"
-          src="https://d3nn873nee648n.cloudfront.net/1200x1800-new/18448/SM826156.jpg"
+          src={blogInform.blogImage}
           width={270}
         />
       </CardBody>
       <div className="flex justify-center gap-3">
-    <Button color="danger">
+        <Link to={`/blog/${blogInform._id}`}>
+        <Button color="danger"> 
       Read More
-    </Button>
+    </Button> 
+    {/* we can disable a button if there is no value for the button by simply adding disabled={true} like:<Button disabled={boginform.blogImage?false:true} color="danger"></Button> */}
+        </Link>
       </div>
     </Card>
     

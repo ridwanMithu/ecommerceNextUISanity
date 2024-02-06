@@ -6,8 +6,26 @@ import {Pagination} from 'swiper/modules'
 // Import Swiper styles
 import 'swiper/css';
 import BlogCards from './BlogCards';
+import { useEffect, useState } from 'react';
+import { client } from '../../Config/SanityConfig';
 
 export default function BlogSlider() {
+  const [blogs, setBlog]=useState([])
+
+  const getBlogData=async()=>{
+    // fetch("./blog.json")
+    // .then((res)=> res.json())
+    // .then((data)=>setBlog(data));
+    const blogQuery=`*[_type=="blogSection"]{blogTopic, blogCategory, publishingDate,blogImage,_id,blogAuthor}`
+    const blogData=await client.fetch(blogQuery);
+    setBlog(blogData)
+  }
+
+  console.log(blogs)
+
+  useEffect(()=>{
+    getBlogData();
+  },[])
   return (
     <Swiper
     pagination={{
@@ -27,17 +45,24 @@ export default function BlogSlider() {
             spaceBetween: 14,
           },
           1024: {
-            slidesPerView: 4,
-            spaceBetween: 15,
+            slidesPerView: 3,
+            spaceBetween: 10,
           },
         }}
         modules={[Pagination]}
-      spaceBetween={20}
-      slidesPerView={4}
+      spaceBetween={10}
+      slidesPerView={3}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide><BlogCards/></SwiperSlide>
+      {/* <SwiperSlide><BlogCards/></SwiperSlide> */}
+      {
+        blogs.map((blogsdet)=>(
+          <SwiperSlide key={blogsdet._id} >
+            <BlogCards blogInform={blogsdet}/>
+          </SwiperSlide>
+        ))
+      }
     </Swiper>
   );
 };

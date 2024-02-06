@@ -14,7 +14,7 @@ export default function Blog() {
       
       <div className="w-full h-[90vh] bg-red-100">
 
-      <div className="container flex flex-wrap justify-center gap-3">
+      <div className="flex flex-wrap justify-center gap-3">
       <BlogSlider/>
       </div>
 
