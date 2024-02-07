@@ -27,12 +27,29 @@ export default function AllProducts() {
       const searchResult=await client.fetch(searchQuery);
       setGrocery(searchResult);
     }
+    
+    const  handleSelection = (e) => {
+      // console.log(e.target.value); 
+      const selectEntry=e.target.value; 
+      console.log(selectEntry);
+      catSelection(selectEntry);
+    }
+
+    const catSelection=async(selection)=>{
+      
+      const selectQuery=`*[_type=="allproducts" && category._ref match "${selection}"]
+      {productName, productPrice, productAmount,productStock,
+        "imageUrl": productImage.asset->url,_id,"category":category->categoryName}`;
+      const selectResult=await client.fetch(selectQuery);
+      setGrocery(selectResult);
+    }
+    
 
 
       
   // to get grocery items
   const getGrocery=async ()=>{
-    const groceryQuery=`*[_type=="allproducts"]{productName,productAmount,"imageUrl": productImage.asset->url,productStock, "type":category->categoryName,_id,productPrice }`
+    const groceryQuery=`*[_type=="allproducts"]{productName,productAmount,"imageUrl": productImage.asset->url,productStock, "type":category->categoryName,_id,productPrice,_id }`
     const groceryData=await client.fetch(groceryQuery);
     setGrocery(groceryData)
    };
@@ -40,6 +57,7 @@ export default function AllProducts() {
     getGrocery();
     getCategory();
     productSearch();
+    catSelection();
    },[]);
 
   return (
@@ -50,10 +68,13 @@ export default function AllProducts() {
           <link rel="canonical" href="/home" />
         </Helmet>
       <div>
-      <form className="flex justify-center"><Input name="userSearchValue" type="text" label="Search your item" className="max-w-md " onChange={handleSearch} />
+      <form className="flex justify-center">
+        <Input name="userSearchValue" type="text" label="Search your item" className="max-w-md " onChange={handleSearch} />
         <Select 
+        name="categorySelect"
         label="Select a Category" 
-        className="max-w-md mx-10" 
+        className="max-w-md mx-10"
+        onChange={handleSelection}
       >
        {category.map(item=> <SelectItem key={item._id} value={item.categoryName}>{item.categoryName}</SelectItem>)}
       </Select>
