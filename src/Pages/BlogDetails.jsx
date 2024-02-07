@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 import { client } from "../Config/SanityConfig";
 import { useEffect, useState } from "react";
+import {PortableText} from '@portabletext/react'
+import { Blocks } from "lucide-react";
 
 export const BlogDetails = () => {
   const [singleBlog, setSingleBlog]=useState([]);
@@ -18,7 +20,7 @@ export const BlogDetails = () => {
     getSingleBlog(id);
   },[])
 
-  
+
   return (
     <>
     <Helmet>
@@ -41,7 +43,10 @@ export const BlogDetails = () => {
           </span>
         </div>
           <p className="max-w-3xl mt-8 text-lg text-gray-700">
-
+          <PortableText
+  value={singleBlog.blogDetails}
+  components={Blocks}
+/>
           </p>
           <div className="mt-8">
 
