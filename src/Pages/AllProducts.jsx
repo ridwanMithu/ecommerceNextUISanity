@@ -8,7 +8,7 @@ export default function AllProducts() {
   const [grocery, setGrocery]=useState([]);
   
   const getGrocery=async ()=>{
-    const groceryQuery=`*[_type=="allproducts"]{productName,productAmount,"imageUrl": productImage.asset->url,productStock, category,_id,productPrice }`
+    const groceryQuery=`*[_type=="allproducts"]{productName,productAmount,"imageUrl": productImage.asset->url,productStock, "type":category->categoryName,_id,productPrice }`
     const groceryData=await client.fetch(groceryQuery);
     setGrocery(groceryData)
    };

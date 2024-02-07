@@ -11,6 +11,9 @@ export default function ProductCard({groceryInfo}) {
       />
       <div className="p-4">
         <h1 className="text-lg font-semibold">{groceryInfo.productName} &nbsp;</h1>
+        <p className="mt-3 text-sm text-gray-600"><span>Category: </span>
+          {groceryInfo.type}
+        </p>
         <p className="mt-3 text-sm text-gray-600"><span>Current Stock: </span>
           {groceryInfo.productStock}
         </p>

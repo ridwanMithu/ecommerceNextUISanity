@@ -16,7 +16,7 @@ export default function BlogSlider() {
     // fetch("./blog.json")
     // .then((res)=> res.json())
     // .then((data)=>setBlog(data));
-    const blogQuery=`*[_type=="blogSection"]{blogTopic, blogCategory, publishingDate,blogImage,_id,blogAuthor}`
+    const blogQuery=`*[_type=="blogSection"]{blogTopic, blogCategory, publishingDate,blogImage,_id,blogAuthor,authorEmail, publishingDate}`
     const blogData=await client.fetch(blogQuery);
     setBlog(blogData)
   }
